@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subhan Ahmed Chandio | Software Engineer</title>
+    <link rel="icon" href="1.png">
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <!-- Load critical CSS inline, defer non-critical -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lenis Smooth Scroll - defer loading -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
+</head>
+
+<body class="text-primary">
+    <nav class="shadow-lg">
+        <div class="container mx-auto px-4 flex items-center justify-between relative">
+            <!-- This logo's src will be changed by JavaScript -->
+            <a href="#home" class="flex items-center">
+                <img id="logoImage" src="1.png" alt="Subhan Chandio Logo" class="h-12 w-auto rounded-lg">
+            </a>
+            <div class="hidden md:flex items-center gap-2">
+                <a href="#home" class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Home</a>
+                <a href="#about" class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">About</a>
+                <a href="#skills"
+                    class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Skills</a>
+                <a href="#experience"
+                    class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Experience</a>
+                <a href="#certifications"
+                    class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Certifications</a>
+                <a href="#projects"
+                    class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Projects</a>
+                <a href="#contact"
+                    class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Contact</a>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="darkModeToggle" class="p-2 rounded-full transition-all duration-300">
+                    <i class="fas fa-moon text-lg"></i>
+                </button>
+                <button id="mobileMenuButton" class="md:hidden focus:outline-none p-2 transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                    <a href="#home" class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Home</a>
+                    <a href="#about"
+                        class="block px-3 py-3 rounded-md text-primary transition-all duration-300">About</a>
+                    <a href="#skills"
+                        class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Skills</a>
+                    <a href="#experience"
+                        class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Experience</a>
+                    <a href="#certifications"
+                        class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Certifications</a>
+                    <a href="#projects"
+                        class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Projects</a>
+                    <a href="#contact"
+                        class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home">
+        <!-- Floating Tech Icons -->
+        <i class="fab fa-python tech-icon" style="top: 15%; left: 10%; animation-delay: 0s;"></i>
+        <i class="fab fa-java tech-icon" style="top: 70%; left: 15%; font-size: 4rem; animation-delay: 3s;"></i>
+        <i class="fab fa-android tech-icon" style="top: 25%; right: 10%; animation-delay: 6s;"></i>
+        <i class="fab fa-react tech-icon" style="bottom: 15%; right: 15%; font-size: 3.5rem; animation-delay: 9s;"></i>
+        <i class="fas fa-database tech-icon"
+            style="bottom: 20%; left: 25%; font-size: 2.5rem; animation-delay: 12s;"></i>
+        <i class="fab fa-node-js tech-icon" style="top: 40%; left: 5%; font-size: 2.8rem; animation-delay: 5s;"></i>
+        <i class="fas fa-brain tech-icon" style="top: 60%; right: 8%; font-size: 3.2rem; animation-delay: 8s;"></i>
+
+        <div class="container mx-auto px-6 py-12 md:py-24 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <div class="inline-block mb-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+                        <span class="text-white/90 text-sm font-medium">👋 Welcome to my portfolio</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white leading-tight">
+                        Hi, I'm <span
+                            class="bg-gradient-to-r from-white to-orange-200 bg-clip-text text-transparent">Subhan Ahmed
+                            Chandio</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-4xl font-semibold mb-6 text-white/95 min-h-[3rem] md:min-h-[4rem]">
+                        <span id="typed-text"
+                            class="bg-gradient-to-r from-orange-200 to-white bg-clip-text text-transparent"></span>
+                        <span class="animate-pulse">|</span>
+                    </h2>
+                    <p class="text-lg text-white/90 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        Passionate about building innovative solutions with <strong>Python</strong>,
+                        <strong>Android</strong>, and <strong>Machine Learning</strong>.
+                        Turning complex problems into elegant software.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-8">
+                        <a href="#contact"
+                            class="bg-white text-[--accent-red] px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
+                            <i class="fas fa-envelope mr-2"></i>Get In Touch
+                        </a>
+                        <a href="#projects"
+                            class="border-2 border-white bg-transparent hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-rocket mr-2"></i>View Projects
+                        </a>
+                    </div>
+                    <!-- Social Links -->
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://linkedin.com/in/subhanahmed333" target="_blank" aria-label="LinkedIn Profile"
+                            title="Connect on LinkedIn">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/subhanahmed333" target="_blank" aria-label="GitHub Profile"
+                            title="View GitHub">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://medium.com/@subhanahmed333" target="_blank" aria-label="Medium Blog"
+                            title="Read on Medium">
+                            <i class="fab fa-medium text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center profile-image-container">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div
+                            class="absolute inset-0 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
+                            <img src="subhan.jpg" alt="Subhan Ahmed Chandio - Software Engineer"
+                                class="w-full h-full object-cover" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator hidden md:flex"
+            onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    <!-- END HERO SECTION -->
+
+    <!-- ============================================= -->
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container mx-auto px-6">
+            <!-- Section Header with Animated Underline -->
+            <div class="text-center mb-12">
+                <div class="inline-block">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-3">
+                        About <span class="accent-text">Me</span>
+                    </h2>
+                    <div class="about-underline"></div>
+                </div>
+                <p class="text-secondary mt-4 max-w-2xl mx-auto">
+                    Crafting digital experiences with passion and precision
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <!-- Main Content Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <!-- Story Card -->
+                    <div class="lg:col-span-2 glass-card p-6 rounded-2xl about-story-card">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[--accent-red] to-[--accent-orange] flex items-center justify-center">
+                                <i class="fas fa-user text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary">My Story</h3>
+                        </div>
+                        <div class="space-y-3 text-secondary leading-relaxed">
+                            <p class="about-paragraph">
+                                <span class="text-4xl font-bold accent-text float-left mr-3 leading-none">H</span>ello! I'm Subhan, a Software Engineer passionate about crafting intelligent applications. My journey focuses on solving real-world problems at the intersection of <strong class="text-primary">Mobile Development</strong> and <strong class="text-primary">Artificial Intelligence</strong>.
+                            </p>
+                            <p class="about-paragraph">
+                                From Android apps with Java and Firebase to ML models with Python and TensorFlow, I bring complex ideas to life through continuous learning and innovation.
+                            </p>
+                        </div>
+                        
+                        <!-- Quick Facts -->
+                        <div class="grid grid-cols-2 gap-3 mt-6">
+                            <div class="about-fact-card">
+                                <i class="fas fa-map-marker-alt text-xl accent-text mb-2"></i>
+                                <p class="text-xs text-secondary">Based in</p>
+                                <p class="font-semibold text-primary text-sm">Hyderabad, Pakistan</p>
+                            </div>
+                            <div class="about-fact-card">
+                                <i class="fas fa-language text-xl accent-text mb-2"></i>
+                                <p class="text-xs text-secondary">Languages</p>
+                                <p class="font-semibold text-primary text-sm">English, Urdu, Sindhi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Card -->
+                    <div class="space-y-4">
+                        <div class="glass-card p-5 rounded-2xl about-stats-card">
+                            <h3 class="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+                                <i class="fas fa-chart-line accent-text"></i>
+                                Quick Stats
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="stat-item">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-xs font-medium text-secondary">Machine Learning</span>
+                                        <span class="text-xs font-bold accent-text">95%</span>
+                                    </div>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-xs font-medium text-secondary">Android Dev</span>
+                                        <span class="text-xs font-bold accent-text">90%</span>
+                                    </div>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-xs font-medium text-secondary">Python</span>
+                                        <span class="text-xs font-bold accent-text">92%</span>
+                                    </div>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interests Card -->
+                        <div class="glass-card p-5 rounded-2xl about-interests-card">
+                            <h3 class="text-lg font-bold text-primary mb-3 flex items-center gap-2">
+                                <i class="fas fa-heart accent-text"></i>
+                                Interests
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="interest-tag text-xs"><i class="fas fa-brain mr-1"></i>AI/ML</span>
+                                <span class="interest-tag text-xs"><i class="fas fa-mobile-alt mr-1"></i>Mobile</span>
+                                <span class="interest-tag text-xs"><i class="fas fa-code mr-1"></i>Coding</span>
+                                <span class="interest-tag text-xs"><i class="fas fa-users mr-1"></i>Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="achievement-card glass-card p-5 rounded-2xl text-center">
+                        <div class="achievement-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-primary mb-1 counter" data-target="15">0</h4>
+                        <p class="text-secondary font-medium text-sm">Projects Completed</p>
+                    </div>
+                    <div class="achievement-card glass-card p-5 rounded-2xl text-center">
+                        <div class="achievement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-primary mb-1 counter" data-target="7">0</h4>
+                        <p class="text-secondary font-medium text-sm">Certifications</p>
+                    </div>
+                    <div class="achievement-card glass-card p-5 rounded-2xl text-center">
+                        <div class="achievement-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-primary mb-1 counter" data-target="1000">0</h4>
+                        <p class="text-secondary font-medium text-sm">Hours of Coding</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT SECTION -->
+
+
+    <section id="skills">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Technical <span
+                    class="accent-text">Toolkit</span></h2>
+        </div>
+        <div class="skills-container space-y-6">
+            <div class="skills-marquee">
+                <div class="skill-pill"><i class="devicon-python-plain text-2xl"></i><span>Python</span></div>
+                <div class="skill-pill"><i class="devicon-java-plain text-2xl"></i><span>Java</span></div>
+                <div class="skill-pill"><i class="devicon-react-original text-2xl"></i><span>React Native</span></div>
+                <div class="skill-pill"><i class="devicon-tensorflow-original text-2xl"></i><span>TensorFlow</span>
+                </div>
+                <div class="skill-pill"><i class="devicon-pytorch-plain text-2xl"></i><span>PyTorch</span></div>
+                <div class="skill-pill"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                        <path fill="grey"
+                            d="M98.18 88.13c15.63-15.62 18.23-38.36 5.8-50.78-12.43-12.42-35.17-9.82-50.8 5.8-15.63 15.62-11.11 45.48-5.8 50.78 4.29 4.29 35.17 9.82 50.8-5.8Z" />
+                        <path fill="grey"
+                            d="M34.04 65.56c-9.07-9.06-22.27-10.57-29.48-3.37-7.21 7.21-5.7 20.4 3.37 29.46 9.07 9.07 26.4 6.44 29.48 3.37 2.49-2.49 5.71-20.4-3.37-29.46Z" />
+                        <path fill="black"
+                            d="M123.82 85.68c-.58 0-.87-.35-.87-1.06 0-.53.35-1.69 1.04-3.46 1.01-2.59 1.52-4.45 1.52-5.58 0-.68-.2-1.25-.6-1.7-.4-.45-.9-.68-1.5-.68-.88 0-1.89.41-3.03 1.24-1.14.83-2.67 2.32-4.6 4.48.28-1.4.88-3.32 1.78-5.76l-4.31.83c-.98 2.12-1.69 4.03-2.13 5.73-.22.83-.38 1.69-.49 2.56-1.35 1.31-2.23 2.1-2.61 2.39-.39.29-.8.43-1.22.43-.39 0-.7-.15-.93-.44-.23-.29-.34-.69-.34-1.18 0-.53.1-1.14.3-1.83s.64-1.99 1.33-3.9l1.64-4.52-1.61.07c-1.46 2.78-3.17 4.28-5.13 4.49.53-1.38.8-2.44.8-3.18 0-.94-.46-1.41-1.38-1.41-1.09 0-1.94.51-2.55 1.54-.62 1.03-.93 2-.93 2.91s.51 1.55 1.52 2c-.66.97-1.4 1.88-2.2 2.74-.95.94-1.69 1.66-2.23 2.13-.55.49-1.06.73-1.52.73-.72 0-1.08-.51-1.08-1.52s.4-2.75 1.2-5.35l1.56-5.18h-.99l-3.61 2c-.59-1.35-1.62-2.03-3.09-2.03-1.17 0-2.51.5-4.03 1.49-1.52.99-2.77 2.28-3.74 3.89-.75 1.24-1.21 2.54-1.38 3.88-1.36 1.36-2.38 2.24-3.06 2.65-.71.42-1.45.63-2.23.63-1.99 0-3.22-1.15-3.69-3.45 5.19-1.52 7.78-3.5 7.78-5.94 0-.92-.33-1.66-.99-2.23-.66-.57-1.54-.85-2.63-.85-2.11 0-4.03 1.01-5.76 3.03-1.57 1.83-2.42 3.86-2.57 6.09-1.43 1.41-2.51 2.34-3.21 2.79-.72.46-1.4.69-2.03.69s-1.13-.3-1.5-.9c-.38-.6-.57-1.41-.57-2.44 0-.46.05-1.3.14-2.53 2.36-2.56 4.09-4.96 5.2-7.21 1.11-2.25 1.66-4.58 1.66-6.98 0-.85-.11-1.52-.33-2.02-.22-.5-.5-.75-.84-.75-.07 0-.18.02-.32.07l-4.49 1.66c-1.53 2.92-2.84 6.11-3.91 9.58-1.07 3.46-1.61 6.43-1.61 8.9 0 1.65.38 2.96 1.16 3.94.77.98 1.79 1.47 3.05 1.47 1.1 0 2.25-.35 3.46-1.05 1.21-.7 2.61-1.79 4.22-3.26s0-.02 0-.02c.19 1.11.65 2.04 1.37 2.8.99 1.02 2.28 1.54 3.88 1.54 1.44 0 2.75-.35 3.94-1.05 1.15-.67 2.44-1.72 3.88-3.11.12 1.04.46 1.94 1.03 2.71.73.97 1.61 1.46 2.64 1.46s2.09-.4 3.09-1.2c1-.8 2.08-2.05 3.26-3.73-.11 3.29.77 4.93 2.63 4.93.74 0 1.52-.27 2.33-.81s2.16-1.71 4.05-3.5c1.64-1.62 2.84-3.14 3.61-4.56 1.04-.18 1.99-.49 2.86-.94-1.78 2.79-2.67 5.02-2.67 6.68 0 .9.25 1.65.74 2.25.49.6 1.1.91 1.82.91 1.57 0 3.8-1.41 6.68-4.2 0 .22-.02.43-.02.65 0 .78.07 1.96.19 3.55l3.91-.92c0-1.06.02-1.9.05-2.53.06-.84.18-1.76.35-2.76.11-.59.38-1.15.81-1.68l.99-1.15c.36-.42.71-.8 1.02-1.13.37-.39.7-.72.99-.99.33-.29.62-.53.87-.69.27-.16.49-.25.65-.25.29 0 .44.19.44.57s-.28 1.26-.83 2.65c-1.04 2.59-1.56 4.52-1.56 5.78 0 .93.24 1.67.73 2.23.48.55 1.12.83 1.91.83 1.94 0 4.28-1.44 7-4.31V82.3c-1.93 2.27-3.32 3.41-4.18 3.41Zm-65.26-8.29c.8-3.91 1.62-6.94 2.45-9.11.83-2.17 1.47-3.26 1.9-3.26.2 0 .37.13.5.4.13.26.19.62.19 1.05 0 1.49-.46 3.26-1.4 5.33-.93 2.06-2.15 3.93-3.64 5.59Zm11.79-.98c.71-1.19 1.45-1.78 2.23-1.78.82 0 1.24.57 1.24 1.7 0 2.29-1.51 3.85-4.53 4.7 0-1.9.35-3.44 1.06-4.62Zm17.48 5.85c-1.04 2.01-2.16 3.01-3.33 3.01-.48 0-.88-.2-1.19-.59-.31-.39-.47-.91-.47-1.55 0-1.68.53-3.53 1.58-5.53 1.05-2 2.17-3 3.35-3 .49 0 .89.18 1.18.56.29.37.44.89.44 1.55 0 1.7-.52 3.55-1.56 5.56Z" />
+                        <path fill="grey"
+                            d="M75.46 64.88c.15.21.22.48.22.8s-.09.61-.27.88-.44.49-.79.64c-.34.15-.73.23-1.16.23-.72 0-1.26-.15-1.64-.45s-.62-.74-.72-1.33l.93-.15c.05.37.2.66.43.85.24.2.57.3 1 .3s.75-.09.96-.26c.21-.17.31-.38.31-.62 0-.21-.09-.38-.28-.5-.13-.08-.45-.19-.96-.32-.69-.17-1.16-.32-1.43-.45s-.47-.3-.6-.53-.21-.47-.21-.74c0-.25.06-.47.17-.68.11-.21.27-.38.46-.52.15-.11.34-.2.59-.27.25-.07.52-.11.81-.11.43 0 .81.06 1.14.19.33.12.57.29.73.51.16.21.26.5.32.86l-.92.12c-.04-.28-.16-.51-.36-.67-.2-.16-.48-.24-.85-.24-.43 0-.74.07-.92.21-.18.14-.28.31-.28.5 0 .12.04.23.11.33.08.1.2.18.36.25.09.03.37.11.83.24.66.18 1.12.32 1.39.43.26.11.47.28.62.49Zm4.47 1.44c-.25.23-.55.34-.92.34-.46 0-.83-.17-1.11-.5s-.43-.88-.43-1.62.15-1.27.44-1.6.68-.51 1.15-.51c.31 0 .58.09.8.28.22.19.37.47.46.84l.91-.14c-.11-.56-.35-.99-.73-1.29-.38-.3-.87-.45-1.47-.45-.48 0-.91.11-1.32.34-.4.22-.71.56-.9 1.01-.2.45-.3.97-.3 1.57 0 .92.23 1.63.69 2.12.46.49 1.07.74 1.82.74.6 0 1.11-.18 1.53-.54.41-.36.67-.86.77-1.49l-.92-.12c-.07.47-.22.81-.47 1.04Zm2.19.98h.94v-5.52h-.94v5.52Zm0-6.55h.94v-1.08h-.94v1.08Zm6.73 1.02h-1.21l-2.22 2.25v-4.35h-.94v7.62h.94V65.1l.66-.63 1.83 2.82h1.16l-2.33-3.47 2.11-2.05Zm.96-1.02h.94v-1.08h-.94v1.08Zm0 6.55h.94v-5.52h-.94v5.52Zm4.41-.84c-.17.02-.31.04-.41.04-.14 0-.25-.02-.32-.07s-.13-.11-.16-.18c-.03-.08-.05-.25-.05-.51v-3.23h.94v-.73h-.94v-1.93l-.93.56v1.37h-.69v.73h.69v3.18c0 .56.04.93.11 1.1.08.18.21.32.39.42.19.11.45.16.79.16.21 0 .44-.03.71-.08l-.14-.83Z" />
+                    </svg>
+                    <span>Scikit-learn</span>
+                </div>
+                <div class="skill-pill"><i class="devicon-mysql-plain text-2xl"></i><span>SQL</span></div>
+                <div class="skill-pill"><i class="devicon-firebase-plain text-2xl"></i><span>Firebase</span></div>
+                <!-- Duplicates for seamless animation -->
+                <div class="skill-pill" aria-hidden="true"><i
+                        class="devicon-python-plain text-2xl"></i><span>Python</span></div>
+                <div class="skill-pill" aria-hidden="true"><i class="devicon-java-plain text-2xl"></i><span>Java</span>
+                </div>
+                <div class="skill-pill" aria-hidden="true"><i class="devicon-react-original text-2xl"></i><span>React
+                        Native</span></div>
+                <div class="skill-pill" aria-hidden="true"><i
+                        class="devicon-tensorflow-original text-2xl"></i><span>TensorFlow</span></div>
+                <div class="skill-pill" aria-hidden="true"><i
+                        class="devicon-pytorch-plain text-2xl"></i><span>PyTorch</span></div>
+                <div class="skill-pill" aria-hidden="true"><i
+                        class="devicon-scikitlearn-plain text-2xl"></i><span>Scikit-learn</span></div>
+                <div class="skill-pill" aria-hidden="true"><i class="devicon-mysql-plain text-2xl"></i><span>SQL</span>
+                </div>
+                <div class="skill-pill" aria-hidden="true"><i
+                        class="devicon-firebase-plain text-2xl"></i><span>Firebase</span></div>
+            </div>
+            <div class="skills-marquee marquee-reverse">
+                <div class="skill-pill"><i class="devicon-android-plain text-2xl"></i><span>Android Dev</span></div>
+                <div class="skill-pill"><i class="devicon-javascript-plain text-2xl"></i><span>JavaScript</span></div>
+                <div class="skill-pill"><i class="devicon-html5-plain text-2xl"></i><i
+                        class="devicon-css3-plain text-2xl"></i><span>HTML/CSS</span></div>
+                <div class="skill-pill"><i class="devicon-git-plain text-2xl"></i><i
+                        class="devicon-github-original text-2xl"></i><span>Git & GitHub</span></div>
+                <div class="skill-pill"><i class="devicon-vscode-plain text-2xl"></i><span>VS Code</span></div>
+                <div class="skill-pill"><i class="devicon-jupyter-plain-wordmark text-2xl"></i><span>Jupyter</span>
+                </div>
+                <div class="skill-pill"><i class="devicon-androidstudio-plain text-2xl"></i><span>Android Studio</span>
+                </div>
+                <!-- Duplicates for seamless animation -->
+                <div class="skill-pill" aria-hidden="true"><i class="devicon-android-plain text-2xl"></i><span>Android
+                        Dev</span></div>
+                <div class="skill-pill" aria-hidden="true"><i
+                        class="devicon-javascript-plain text-2xl"></i><span>JavaScript</span></div>
+                <div class="skill-pill" aria-hidden="true"><i class="devicon-html5-plain text-2xl"></i><i
+                        class="devicon-css3-plain text-2xl"></i><span>HTML/CSS</span></div>
+                <div class="skill-pill" aria-hidden="true"><i class="devicon-git-plain text-2xl"></i><i
+                        class="devicon-github-original text-2xl"></i><span>Git & GitHub</span></div>
+                <div class="skill-pill" aria-hidden="true"><i class="devicon-vscode-plain text-2xl"></i><span>VS
+                        Code</span></div>
+                <div class="skill-pill" aria-hidden="true"><i
+                        class="devicon-jupyter-plain-wordmark text-2xl"></i><span>Jupyter</span></div>
+                <div class="skill-pill" aria-hidden="true"><i
+                        class="devicon-androidstudio-plain text-2xl"></i><span>Android Studio</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-3">
+                        Professional <span class="accent-text">Journey</span>
+                    </h2>
+                    <div class="experience-underline"></div>
+                </div>
+                <p class="text-secondary mt-4 max-w-2xl mx-auto">
+                    A timeline of growth and impactful contributions
+                </p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Animated Timeline Line -->
+                <div class="timeline-line-modern hidden lg:block"></div>
+                
+                <!-- Experience Cards -->
+                <div class="space-y-10">
+                    <!-- Experience 1 - Data Science Intern -->
+                    <div class="experience-card" data-aos="fade-right">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                            <!-- Timeline Marker -->
+                            <div class="hidden lg:flex lg:col-span-1 justify-center">
+                                <div class="experience-marker">
+                                    <div class="marker-ring"></div>
+                                    <div class="marker-dot">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="lg:col-span-11">
+                                <div class="experience-content glass-card p-6 rounded-2xl">
+                                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <div class="experience-icon">
+                                                    <i class="fas fa-chart-line"></i>
+                                                </div>
+                                                <div>
+                                                    <h3 class="text-xl font-bold text-primary">Data Science Intern</h3>
+                                                    <p class="text-secondary font-medium text-sm">Buildables • Internship</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="experience-date">
+                                            <i class="fas fa-calendar-alt mr-1"></i>
+                                            <span>Aug 2025 - Nov 2025</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="text-secondary leading-relaxed mb-3 text-sm">
+                                        Remote internship focused on data analysis, machine learning, and data-driven insights.
+                                    </p>
+                                    
+                                    <!-- Verification Button -->
+                                    <a href="https://verification.givemycertificate.com/v/31dc2b66-95ce-4352-9a89-b924ee14256b" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="verification-btn">
+                                        <span class="verification-btn-icon">
+                                            <i class="fas fa-certificate"></i>
+                                        </span>
+                                        <span class="verification-btn-text">Verify Certificate</span>
+                                        <span class="verification-btn-arrow">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                    
+                                    <!-- Key Highlights -->
+                                    <div class="flex flex-wrap gap-2 mt-3">
+                                        <span class="experience-tag text-xs"><i class="fas fa-chart-bar mr-1"></i>Data Science</span>
+                                        <span class="experience-tag text-xs"><i class="fas fa-laptop-code mr-1"></i>Remote</span>
+                                        <span class="experience-tag text-xs"><i class="fas fa-database mr-1"></i>Analytics</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 - Aspire Leaders -->
+                    <div class="experience-card" data-aos="fade-left">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                            <!-- Timeline Marker -->
+                            <div class="hidden lg:flex lg:col-span-1 justify-center">
+                                <div class="experience-marker">
+                                    <div class="marker-ring"></div>
+                                    <div class="marker-dot">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="lg:col-span-11">
+                                <div class="experience-content glass-card p-6 rounded-2xl">
+                                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <div class="experience-icon">
+                                                    <i class="fas fa-graduation-cap"></i>
+                                                </div>
+                                                <div>
+                                                    <h3 class="text-xl font-bold text-primary">Aspire Leaders Program</h3>
+                                                    <p class="text-secondary font-medium text-sm">Aspire Institute, Harvard University</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="experience-date">
+                                            <i class="fas fa-calendar-check mr-1"></i>
+                                            <span>March 2025</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="text-secondary leading-relaxed mb-3 text-sm">
+                                        Completed 40 hours of leadership coursework focusing on critical thinking, communication, and social impact.
+                                    </p>
+                                    
+                                    <!-- Key Highlights -->
+                                    <div class="flex flex-wrap gap-2 mt-3">
+                                        <span class="experience-tag text-xs"><i class="fas fa-star mr-1"></i>Leadership</span>
+                                        <span class="experience-tag text-xs"><i class="fas fa-users mr-1"></i>Collaboration</span>
+                                        <span class="experience-tag text-xs"><i class="fas fa-lightbulb mr-1"></i>Critical Thinking</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 - ML Engineer -->
+                    <div class="experience-card" data-aos="fade-right">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                            <!-- Timeline Marker -->
+                            <div class="hidden lg:flex lg:col-span-1 justify-center">
+                                <div class="experience-marker">
+                                    <div class="marker-ring"></div>
+                                    <div class="marker-dot">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="lg:col-span-11">
+                                <div class="experience-content glass-card p-6 rounded-2xl">
+                                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <div class="experience-icon">
+                                                    <i class="fas fa-brain"></i>
+                                                </div>
+                                                <div>
+                                                    <h3 class="text-xl font-bold text-primary">ML Engineer (Internship)</h3>
+                                                    <p class="text-secondary font-medium text-sm">Bytewise Limited (Fellowship)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="experience-date">
+                                            <i class="fas fa-calendar-alt mr-1"></i>
+                                            <span>Jun - Sep 2024</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="text-secondary leading-relaxed mb-3 text-sm">
+                                        Developed ML/DL models and managed data pipelines from preprocessing to analysis.
+                                    </p>
+                                    
+                                    <!-- Verification Button -->
+                                    <a href="https://verification.givemycertificate.com/v/d7d97716-c7ce-4728-895c-96de7c26a60d" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="verification-btn">
+                                        <span class="verification-btn-icon">
+                                            <i class="fas fa-certificate"></i>
+                                        </span>
+                                        <span class="verification-btn-text">Verify Certificate</span>
+                                        <span class="verification-btn-arrow">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                    
+                                    <!-- Key Highlights -->
+                                    <div class="flex flex-wrap gap-2 mt-3">
+                                        <span class="experience-tag text-xs"><i class="fas fa-robot mr-1"></i>ML/DL</span>
+                                        <span class="experience-tag text-xs"><i class="fas fa-database mr-1"></i>Data Pipelines</span>
+                                        <span class="experience-tag text-xs"><i class="fab fa-python mr-1"></i>Python</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4 - Android Developer -->
+                    <div class="experience-card" data-aos="fade-left">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                            <!-- Timeline Marker -->
+                            <div class="hidden lg:flex lg:col-span-1 justify-center">
+                                <div class="experience-marker">
+                                    <div class="marker-ring"></div>
+                                    <div class="marker-dot">
+                                        <i class="fab fa-android"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="lg:col-span-11">
+                                <div class="experience-content glass-card p-6 rounded-2xl">
+                                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <div class="experience-icon">
+                                                    <i class="fab fa-android"></i>
+                                                </div>
+                                                <div>
+                                                    <h3 class="text-xl font-bold text-primary">Android Developer</h3>
+                                                    <p class="text-secondary font-medium text-sm">Health is Wealth Gym</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="experience-date">
+                                            <i class="fas fa-calendar-alt mr-1"></i>
+                                            <span>Jan - Apr 2024</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="text-secondary leading-relaxed mb-3 text-sm">
+                                        Built gym administration app with Firebase for real-time data and authentication.
+                                    </p>
+                                    
+                                    <!-- Key Highlights -->
+                                    <div class="flex flex-wrap gap-2 mt-3">
+                                        <span class="experience-tag text-xs"><i class="fab fa-android mr-1"></i>Android</span>
+                                        <span class="experience-tag text-xs"><i class="fab fa-java mr-1"></i>Java</span>
+                                        <span class="experience-tag text-xs"><i class="fas fa-fire mr-1"></i>Firebase</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Summary Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+                    <div class="experience-stat-card glass-card p-5 rounded-2xl text-center">
+                        <div class="stat-icon-wrapper">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-primary mb-1">4+</h4>
+                        <p class="text-secondary font-medium text-sm">Professional Roles</p>
+                    </div>
+                    <div class="experience-stat-card glass-card p-5 rounded-2xl text-center">
+                        <div class="stat-icon-wrapper">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-primary mb-1">10+</h4>
+                        <p class="text-secondary font-medium text-sm">Technologies Mastered</p>
+                    </div>
+                    <div class="experience-stat-card glass-card p-5 rounded-2xl text-center">
+                        <div class="stat-icon-wrapper">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-primary mb-1">100%</h4>
+                        <p class="text-secondary font-medium text-sm">Commitment Level</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END EXPERIENCE SECTION -->
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-3">
+                        Licenses & <span class="accent-text">Certifications</span>
+                    </h2>
+                    <div class="cert-underline"></div>
+                </div>
+                <p class="text-secondary mt-4 max-w-2xl mx-auto">
+                    Continuous learning through industry-recognized credentials
+                </p>
+            </div>
+
+            <!-- Certifications Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Certification 1 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-logo-wrapper">
+                        <img src="https://cdn.brandfetch.io/idPv3iQPET/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B"
+                            alt="Stanford Logo" class="cert-logo" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="cert-title">Machine Learning Specialization</h3>
+                    <p class="cert-issuer">Stanford & DeepLearning.AI</p>
+                    <div class="cert-tags">
+                        <span class="cert-tag">ML</span>
+                        <span class="cert-tag">AI</span>
+                        <span class="cert-tag">Python</span>
+                    </div>
+                    <a href="https://coursera.org/verify/specialization/KBX1JVLZF7KS" target="_blank"
+                        class="cert-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Credential
+                    </a>
+                </div>
+                <!-- Certification 3 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-logo-wrapper">
+                        <img src="https://cdn.brandfetch.io/idWvz5T3V7/w/400/h/400/theme/dark/icon.png?c=1dxbfHSJFAPEGdCLU4o5B"
+                            alt="Meta Logo" class="cert-logo" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="cert-title">React Native Specialization</h3>
+                    <p class="cert-issuer">Meta</p>
+                    <div class="cert-tags">
+                        <span class="cert-tag">React Native</span>
+                        <span class="cert-tag">Mobile</span>
+                    </div>
+                    <a href="https://coursera.org/verify/specialization/DRUQ69UNXZKP" target="_blank"
+                        class="cert-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Credential
+                    </a>
+                </div>
+                <!-- Certification 4 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-logo-wrapper">
+                        <img src="https://cdn.brandfetch.io/idNc9ZLSel/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B"
+                            alt="Michigan Logo" class="cert-logo" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="cert-title">Leading People & Teams</h3>
+                    <p class="cert-issuer">University of Michigan</p>
+                    <div class="cert-tags">
+                        <span class="cert-tag">Leadership</span>
+                        <span class="cert-tag">Management</span>
+                    </div>
+                    <a href="https://coursera.org/verify/specialization/HRWQNNWU0G3R" target="_blank"
+                        class="cert-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Credential
+                    </a>
+                </div>
+                <!-- Certification 5 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-logo-wrapper">
+                        <img src="https://cdn.brandfetch.io/idcuOol42D/w/333/h/333/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B"
+                            alt="DeepLearning.AI Logo" class="cert-logo" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="cert-title">AI For Everyone</h3>
+                    <p class="cert-issuer">DeepLearning.AI</p>
+                    <div class="cert-tags">
+                        <span class="cert-tag">AI Strategy</span>
+                        <span class="cert-tag">Fundamentals</span>
+                    </div>
+                    <a href="https://coursera.org/verify/7W9J4ISAIER9" target="_blank" class="cert-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Credential
+                    </a>
+                </div>
+                <!-- Certification 6 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-logo-wrapper">
+                        <img src="ibm_logo.png" alt="IBM Logo" class="cert-logo" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="cert-title">Data Science Orientation</h3>
+                    <p class="cert-issuer">IBM</p>
+                    <div class="cert-tags">
+                        <span class="cert-tag">Data Science</span>
+                        <span class="cert-tag">Analytics</span>
+                    </div>
+                    <a href="https://www.credly.com/badges/0c797eac-2f7a-470d-934e-98b5de82836b" target="_blank"
+                        class="cert-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Credential
+                    </a>
+                </div>
+                <!-- Certification 7 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-logo-wrapper">
+                        <img src="https://cdn.brandfetch.io/idWvz5T3V7/w/400/h/400/theme/dark/icon.png?c=1dxbfHSJFAPEGdCLU4o5B"
+                            alt="Meta Logo" class="cert-logo" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="cert-title">Database Management with MySQL</h3>
+                    <p class="cert-issuer">Meta</p>
+                    <div class="cert-tags">
+                        <span class="cert-tag">MySQL</span>
+                        <span class="cert-tag">Database</span>
+                    </div>
+                    <a href="https://coursera.org/verify/E3UQYTEESWTW" target="_blank" class="cert-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Credential
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CERTIFICATIONS SECTION -->
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-3">
+                        Featured <span class="accent-text">Projects</span>
+                    </h2>
+                    <div class="project-underline"></div>
+                </div>
+                <p class="text-secondary mt-4 max-w-2xl mx-auto">
+                    Transforming ideas into impactful digital solutions
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="indus_book.png" alt="Indus Book App" class="project-image" loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Mobile App</div>
+                        <h3 class="project-title">Indus Book App</h3>
+                        <p class="project-description">E-commerce platform for buying and selling books with seamless checkout.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge"><span>Android</span></span>
+                            <span class="tech-badge"><span>Firebase</span></span>
+                            <span class="tech-badge"><span>Java</span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="trove_icon.png" alt="Trove Pickup App" class="project-image" loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Mobile App</div>
+                        <h3 class="project-title">Trove Pickup App</h3>
+                        <p class="project-description">Ride-hailing app connecting users with pickup truck services on-demand.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge"><span>Android</span></span>
+                            <span class="tech-badge"><span>Firebase</span></span>
+                            <span class="tech-badge"><span>Kotlin</span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="healthiswealth.png" alt="Health is Wealth Admin App" class="project-image" loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Mobile App</div>
+                        <h3 class="project-title">Gym Admin App</h3>
+                        <p class="project-description">Admin panel for managing gym members, schedules, and billing operations.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge"><span>Android</span></span>
+                            <span class="tech-badge"><span>Firebase</span></span>
+                            <span class="tech-badge"><span>Java</span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="bank_loann.png" alt="AI Loan Predictor" class="project-image" loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Machine Learning</div>
+                        <h3 class="project-title">AI Loan Predictor</h3>
+                        <p class="project-description">ML model assessing credit risk and predicting loan approval likelihood.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge"><span>Python</span></span>
+                            <span class="tech-badge"><span>Scikit-learn</span></span>
+                            <span class="tech-badge"><span>Pandas</span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="heart_predict.png" alt="Heart Disease Prediction" class="project-image" loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Machine Learning</div>
+                        <h3 class="project-title">Heart Disease Predictor</h3>
+                        <p class="project-description">Predictive model identifying heart disease risk using patient health data.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge"><span>ML</span></span>
+                            <span class="tech-badge"><span>Python</span></span>
+                            <span class="tech-badge"><span>Analytics</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END PROJECTS SECTION -->
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-3">
+                        Get In <span class="accent-text">Touch</span>
+                    </h2>
+                    <div class="contact-underline"></div>
+                </div>
+                <p class="text-secondary mt-4 max-w-2xl mx-auto">
+                    Let's collaborate and create something amazing together
+                </p>
+            </div>
+
+            <!-- Contact Content -->
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Contact Form -->
+                    <div class="contact-form-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="contact-icon-wrapper">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary">Send a Message</h3>
+                        </div>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                            <input type="hidden" name="access_key" value="d50075a7-707e-4586-b0b9-8c10efdf57e7">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            <input type="hidden" name="subject" value="New Submission from Portfolio Site">
+                            
+                            <div class="form-group">
+                                <label for="name" class="form-label">
+                                    <i class="fas fa-user mr-2"></i>Name
+                                </label>
+                                <input type="text" id="name" name="name" class="form-input"
+                                    placeholder="Your name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope mr-2"></i>Email
+                                </label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="your.email@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">
+                                    <i class="fas fa-comment-dots mr-2"></i>Message
+                                </label>
+                                <textarea id="message" name="message" rows="4" class="form-input"
+                                    placeholder="Your message..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="contact-submit-btn">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                        <!-- Email Card -->
+                        <div class="contact-info-card glass-card p-5 rounded-2xl">
+                            <div class="flex items-center gap-4">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-primary mb-1">Email</h4>
+                                    <a href="mailto:subhanchandio152@gmail.com" 
+                                       class="text-secondary hover:text-[--accent-red] transition-colors text-sm break-all">
+                                        subhanchandio152@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Card -->
+                        <div class="contact-info-card glass-card p-5 rounded-2xl">
+                            <div class="flex items-center gap-4">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-primary mb-1">Location</h4>
+                                    <p class="text-secondary text-sm">Hyderabad, Sindh, Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links Card -->
+                        <div class="contact-info-card glass-card p-5 rounded-2xl">
+                            <div class="flex items-center gap-4">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-primary mb-3">Connect With Me</h4>
+                                    <div class="flex gap-3">
+                                        <a href="https://linkedin.com/in/subhanahmed333" target="_blank" 
+                                           class="social-link" aria-label="LinkedIn">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="https://github.com/subhanahmed333" target="_blank" 
+                                           class="social-link" aria-label="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://medium.com/@subhanahmed333" target="_blank" 
+                                           class="social-link" aria-label="Medium">
+                                            <i class="fab fa-medium-m"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Availability Badge -->
+                        <div class="availability-badge glass-card p-5 rounded-2xl text-center">
+                            <div class="flex items-center justify-center gap-2 mb-2">
+                                <div class="availability-dot"></div>
+                                <span class="font-bold text-primary">Available for Work</span>
+                            </div>
+                            <p class="text-sm text-secondary">Open to new opportunities and collaborations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CONTACT SECTION -->
+
+    <footer class="bg-background-secondary py-8 text-center mt-12 border-t border-border-color">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://linkedin.com/in/subhanahmed333" target="_blank"
+                    class="text-secondary hover:text-[--accent-red] text-2xl transition-colors duration-300"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/subhanahmed333" target="_blank"
+                    class="text-secondary hover:text-[--accent-red] text-2xl transition-colors duration-300"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://medium.com/@subhanahmed333" target="_blank"
+                    class="text-secondary hover:text-[--accent-red] text-2xl transition-colors duration-300"><i
+                        class="fab fa-medium"></i></a>
+            </div>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="resources.html" class="text-secondary hover:text-[--accent-red] transition-colors duration-300">Resources</a>
+            </div>
+            <p class="text-secondary">© 2026 Subhan Ahmed Chandio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

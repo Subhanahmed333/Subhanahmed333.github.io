@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Resources Management</title>
+    <link rel="icon" href="../1.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin-style.css">
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    
+    <!-- Marked.js for Markdown Preview -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Login Screen -->
+    <div id="loginScreen" class="min-h-screen flex items-center justify-center px-4">
+        <div class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8">
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 bg-gradient-to-r from-red-600 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">Admin Panel</h2>
+                <p class="text-gray-600 mt-2">Resources Management System</p>
+            </div>
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" id="loginEmail" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                    <input type="password" id="loginPassword" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                </div>
+                <button type="submit"
+                    class="w-full bg-gradient-to-r from-red-600 to-orange-500 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                    <i class="fas fa-sign-in-alt mr-2"></i>Login
+                </button>
+            </form>
+            <div id="loginError" class="mt-4 text-red-600 text-sm text-center hidden"></div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="hidden">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-red-600 to-orange-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-book text-white"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h1 class="text-xl font-bold text-gray-800">Resources Admin</h1>
+                            <p class="text-sm text-gray-600">Manage learning resources</p>
+                        </div>
+                    </div>
+                    <button onclick="logout()"
+                        class="px-4 py-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 transition-colors">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Add Resource Button -->
+            <div class="mb-6">
+                <button onclick="openAddModal()"
+                    class="px-6 py-3 bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                    <i class="fas fa-plus mr-2"></i>Add New Resource
+                </button>
+            </div>
+
+            <!-- Resources List -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="px-6 py-4 border-b border-gray-200">
+                    <h2 class="text-lg font-semibold text-gray-800">All Resources</h2>
+                </div>
+                <div id="resourcesList" class="divide-y divide-gray-200">
+                    <!-- Resources will be loaded here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Resource Modal -->
+    <div id="resourceModal" class="modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-800">Add New Resource</h3>
+                <button onclick="closeModal()" class="modal-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="resourceForm" class="modal-body">
+                <input type="hidden" id="resourceId">
+                
+                <div class="form-group">
+                    <label class="form-label">Title *</label>
+                    <input type="text" id="resourceTitle" required maxlength="100"
+                        class="form-input" placeholder="e.g., Machine Learning Basics">
+                    <p class="form-hint">Maximum 100 characters</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Description *</label>
+                    <textarea id="resourceDescription" required maxlength="200" rows="3"
+                        class="form-input" placeholder="Brief description of the resource"></textarea>
+                    <p class="form-hint"><span id="descCharCount">0</span>/200 characters</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Notes (Markdown Supported) *</label>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div>
+                            <textarea id="resourceNotes" required rows="12"
+                                class="form-input font-mono text-sm" placeholder="# Heading&#10;&#10;## Subheading&#10;&#10;- List item 1&#10;- List item 2&#10;&#10;**Bold text**"></textarea>
+                        </div>
+                        <div>
+                            <div class="border border-gray-300 rounded-lg p-4 h-full overflow-y-auto bg-gray-50">
+                                <p class="text-xs text-gray-500 mb-2">Preview:</p>
+                                <div id="notesPreview" class="prose prose-sm max-w-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Media Link (Optional)</label>
+                    <input type="url" id="resourceMediaLink"
+                        class="form-input" placeholder="https://example.com/file.pdf">
+                    <p class="form-hint">Leave empty if no downloadable file available</p>
+                </div>
+
+                <div class="flex gap-3 pt-4">
+                    <button type="submit"
+                        class="flex-1 px-6 py-3 bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                        <i class="fas fa-save mr-2"></i>Save Resource
+                    </button>
+                    <button type="button" onclick="closeModal()"
+                        class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../firebase-config-env.js"></script>
+    <script src="admin-script.js"></script>
+</body>
+
+</html>

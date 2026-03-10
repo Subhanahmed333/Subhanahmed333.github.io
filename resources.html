@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Subhan Ahmed Chandio</title>
+    <link rel="icon" href="1.png">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="text-primary">
+    <nav class="shadow-lg">
+        <div class="container mx-auto px-4 flex items-center justify-between relative">
+            <a href="index.html#home" class="flex items-center">
+                <img id="logoImage" src="1.png" alt="Subhan Chandio Logo" class="h-12 w-auto rounded-lg">
+            </a>
+            <div class="hidden md:flex items-center gap-2">
+                <a href="index.html#home" class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Home</a>
+                <a href="index.html#about" class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">About</a>
+                <a href="index.html#skills" class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Skills</a>
+                <a href="index.html#experience" class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Experience</a>
+                <a href="index.html#certifications" class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Certifications</a>
+                <a href="index.html#projects" class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Projects</a>
+                <a href="index.html#contact" class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">Contact</a>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="darkModeToggle" class="p-2 rounded-full transition-all duration-300">
+                    <i class="fas fa-moon text-lg"></i>
+                </button>
+                <button id="mobileMenuButton" class="md:hidden focus:outline-none p-2 transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                    <a href="index.html#home" class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Home</a>
+                    <a href="index.html#about" class="block px-3 py-3 rounded-md text-primary transition-all duration-300">About</a>
+                    <a href="index.html#skills" class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Skills</a>
+                    <a href="index.html#experience" class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Experience</a>
+                    <a href="index.html#certifications" class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Certifications</a>
+                    <a href="index.html#projects" class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Projects</a>
+                    <a href="index.html#contact" class="block px-3 py-3 rounded-md text-primary transition-all duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- RESOURCES SECTION -->
+    <section id="resources" style="padding-top: 120px;">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Learning <span class="accent-text">Resources</span>
+                </h2>
+                <p class="text-secondary text-lg max-w-2xl mx-auto mb-8">
+                    Curated collection of articles, guides, and documents to help you learn and grow
+                </p>
+                
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search resources by title..."
+                            autocomplete="off"
+                        />
+                        <button id="clearSearch" class="clear-search-btn" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div id="searchResults" class="search-results-info"></div>
+                </div>
+            </div>
+
+            <!-- Resources Grid -->
+            <div id="resourcesGrid" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Loading State -->
+                <div class="col-span-full text-center py-12">
+                    <i class="fas fa-spinner fa-spin text-4xl text-gray-400 mb-4"></i>
+                    <p class="text-gray-600">Loading resources...</p>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div id="pagination" class="flex justify-center items-center gap-2 mt-12" style="display: none;">
+                <div id="paginationButtons" class="flex items-center gap-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notes Modal -->
+    <div id="notesModal" class="notes-modal">
+        <div class="notes-modal-overlay" onclick="closeNotes()"></div>
+        <div class="notes-modal-content">
+            <div class="notes-modal-header">
+                <h2 id="notesTitle" class="text-2xl font-bold text-primary"></h2>
+                <button onclick="closeNotes()" class="notes-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="notes-modal-body">
+                <div id="notesContent" class="notes-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-background-secondary py-8 text-center mt-12 border-t border-border-color">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://linkedin.com/in/subhanahmed333" target="_blank"
+                    class="text-secondary hover:text-[--accent-red] text-2xl transition-colors duration-300"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/subhanahmed333" target="_blank"
+                    class="text-secondary hover:text-[--accent-red] text-2xl transition-colors duration-300"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://medium.com/@subhanahmed333" target="_blank"
+                    class="text-secondary hover:text-[--accent-red] text-2xl transition-colors duration-300"><i
+                        class="fab fa-medium"></i></a>
+            </div>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="resources.html" class="text-secondary hover:text-[--accent-red] transition-colors duration-300">Resources</a>
+            </div>
+            <p class="text-secondary">© 2026 Subhan Ahmed Chandio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    
+    <!-- Marked.js for Markdown Rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Firebase Configuration -->
+    <script src="firebase-config-env.js"></script>
+    
+    <!-- Resources Script -->
+    <script src="resources-script.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
